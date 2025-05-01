@@ -1,12 +1,54 @@
-# React + Vite
+# 🚀 Team Member Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack MERN (MongoDB, Express, React, Node.js) application for managing team members with clean UI and dynamic routing. Add new members, view the team, and check detailed profiles — all through a smooth and intuitive interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
 
-## Expanding the ESLint configuration
+- ✅ Fully functional CRUD operations  
+- ✅ Clean and consistent layout with basic CSS  
+- ✅ Image upload with file storage to `uploads/` folder  
+- ✅ MongoDB integration for storing member data  
+- ✅ RESTful API calls tested with browser/Postman  
+- ✅ Navigation with React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🖥️ Pages
+
+### 🏠 Home Page
+- Displays team name as a header/banner
+- Welcome message + team intro
+- Buttons: `Add Member` and `View Members`
+
+### ➕ Add Member Page
+- Form with: Name, Role, Email, Contact Info, Image Upload
+- Client-side validation
+- Submits to: `POST /members`
+- Backend stores data in MongoDB & saves images in `/uploads`
+
+### 📄 View Members Page
+- Fetches and displays all members using `GET /members`
+- Shows Name, Role, and Profile Image
+- Each member includes a `View Details` button
+
+### 🧍 Member Details Page
+- Accessed via dynamic routing using member ID
+- Fetches from: `GET /members/:id`
+- Displays full details including uploaded image
+
+---
+
+## 🔌 API Endpoints
+
+| Method | Endpoint           | Description                  |
+|--------|--------------------|------------------------------|
+| GET    | `/api/members`     | Retrieve all team members    |
+| GET    | `/api/members/:id` | Retrieve a specific member   |
+| POST   | `/api/members`     | Add a new member             |
+
+---
+
+## 📁 Folder Structure
+
